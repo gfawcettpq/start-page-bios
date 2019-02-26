@@ -1,0 +1,14 @@
+{
+  "fun": [
+    ["https://slashdot.org", "Slashdot"],
+    ["https://google.ca", "Google"],
+    ["https://youtube.com", "YouTube"]
+  ],
+  "work": [
+    ["http://devops-jenkins.pre.proquest.com:8080", "DevOps-Jenkins"]
+  ],
+  "docs": [
+    ["https://docs.aws.amazon.com/sdkforruby/api/index.html", "AWS SDK Ruby"],
+    ["http://rubocop.readthedocs.io/en/latest/cops_style/", "Rubocop"]
+  ]
+}
