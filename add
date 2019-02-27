@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+section = ARGV[0]
+title = ARGV[1]
+url = ARGV[2]
+
+unless ARGV.size.eql? 3
+  puts 'usage: add [work|fun|docs] TITLE URL'
+  puts "\t example: add fun 'Slashdot' 'https://slashdot.org'"
+  exit 1
+end
+
+LINKS_FILE = '/home/gfawcett/.startpage/links.json'.freeze
+
+links = JSON.parse(File.read(LINKS_FILE))
+
+links[section] = [] unless links.key? section
+
+links[section] << [url, title]
+
+links.each do |k, v|
+  links[k] = v.sort_by { |t| t[1] }
+end
+
+File.write(LINKS_FILE, JSON.pretty_generate(links))
