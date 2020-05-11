@@ -20,7 +20,7 @@ class DocsPage extends Page
 
           # Item-based method is too expensive, use this instead
           collection = urls.map (item)=>
-            {html: ()-> "<a class='nav' href='#{item[0]}'>#{item[1]} <span style='color: #555555;'>#{item[0]}</span></a>"}
+            {html: ()-> "<a class='nav' href='#{item[0]}'>#{item[1]}</a>"}
 
           $('#docs').empty()
 
