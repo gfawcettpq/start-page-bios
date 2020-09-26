@@ -20,7 +20,7 @@ class FunPage extends Page
 
           # Item-based method is too expensive, use this instead
           collection = urls.map (item)=>
-            {html: ()-> "<a class='nav' href='#{item[0]}'>#{item[1]}</a>"}
+            {html: ()-> "<a class='nav' target='_top' href='#{item[0]}'>#{item[1]}</a>"}
 
           $('#fun').empty()
 
