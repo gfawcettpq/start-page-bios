@@ -1,0 +1,15 @@
+kind: pipeline
+name: startpage-docker-image
+type: docker
+
+clone:
+  disable: true
+
+steps:
+  - name: image
+    image: plugins/docker
+    settings:
+      username: admin
+      password: 77bc04545cf4b517ed93f269afd7da9a0da60d19
+      registry: registry.chickenoncow.com
+      repo: registry.chickenoncow.com/gfawcett/startpage
