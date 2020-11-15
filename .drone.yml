@@ -6,6 +6,10 @@ clone:
   disable: true
 
 steps:
+  - name: debug
+    image: busybox
+    commands:
+      - ls -la
   - name: image
     image: plugins/docker
     settings:
