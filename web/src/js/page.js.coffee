@@ -1,7 +1,7 @@
 $ = require 'cash-dom'
 
 class Page
-  BASE_URL: "http://#{process.env['API_HOST']}:3000/"
+  BASE_URL: "http://startpage-api.chickenoncow.com"
 
   constructor: ->
     @collection = @COLLECTION.map (item)=>
