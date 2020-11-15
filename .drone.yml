@@ -6,6 +6,11 @@ clone:
   disable: true
 
 steps:
+  - name: git
+    image: plugins/git
+    settings:
+      depth: 10
+      skip_verify: true
   - name: debug
     image: busybox
     commands:
