@@ -1,12 +1,13 @@
 // mimicking American MegaTrends color scheme
-$bgColorBlue: #0000AA;
-$bgColorLightGray: #AAAAAA;
+$bgColorBlue: #43435e;
+$bgColorLightGray: #e5e9f0;
 $textColorBlue: $bgColorBlue;
 $textColorLightGray: $bgColorLightGray;
-$textColorDarkGray: #555555;
-$textColorWhite: #FFFFFF;
+$textColorDarkGray: #4c566a;
+$textColorWhite: #eceff4;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: monospace;

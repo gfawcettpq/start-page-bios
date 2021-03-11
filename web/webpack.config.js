@@ -1,15 +1,26 @@
 module.exports = {
-  context: __dirname + '/src',
-  entry: __dirname + '/src/js/main.coffee',
+  context: __dirname + "/src",
+  entry: __dirname + "/src/js/main.coffee",
   output: {
-    path: 'output',
-    filename: 'bundle.js'
+    path: "output",
+    filename: "bundle.js",
+  },
+  devServer: {
+    compress: true,
+    public: "startpage.chickenoncow.com",
   },
   module: {
     loaders: [
-      { test: /\.scss$/, loader: "style-loader!css-loader?importLoaders=1!sass-loader!postcss-loader" },
+      {
+        test: /\.scss$/,
+        loader:
+          "style-loader!css-loader?importLoaders=1!sass-loader!postcss-loader",
+      },
       { test: /\.coffee$/, loader: "coffee-loader" },
-      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" }
-    ]
-  }
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        loader: "file",
+      },
+    ],
+  },
 };
